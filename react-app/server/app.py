@@ -238,8 +238,8 @@ def create_alert():
     METRIC_PRESETS = {
         "mlr": {
             "name": "HIGH_MLR",
-            "condition_gt": "SELECT 1 FROM PAYER360_CUR.FINANCIAL.MART_MEDICAL_LOSS_RATIO HAVING AVG(MLR_PCT) * 100 > {threshold}",
-            "condition_lt": "SELECT 1 FROM PAYER360_CUR.FINANCIAL.MART_MEDICAL_LOSS_RATIO HAVING AVG(MLR_PCT) * 100 < {threshold}",
+            "condition_gt": "SELECT 1 FROM PAYER360_CUR.FINANCIAL.MART_MEDICAL_LOSS_RATIO HAVING AVG(MLR_PCT) > {threshold}",
+            "condition_lt": "SELECT 1 FROM PAYER360_CUR.FINANCIAL.MART_MEDICAL_LOSS_RATIO HAVING AVG(MLR_PCT) < {threshold}",
         },
         "denial_rate": {
             "name": "HIGH_DENIAL_RATE",
