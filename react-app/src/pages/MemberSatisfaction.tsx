@@ -62,11 +62,11 @@ export default function MemberSatisfaction() {
       <h1 className="text-2xl font-bold text-white">Member Satisfaction</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <KPICard title="NPS Score" value={`${kpi.data?.[0]?.NPS}`} />
-        <KPICard title="Promoter %" value={`${kpi.data?.[0]?.PROMOTER_PCT}%`} />
-        <KPICard title="Detractor %" value={`${kpi.data?.[0]?.DETRACTOR_PCT}%`} />
-        <KPICard title="Avg Satisfaction" value={`${kpi.data?.[0]?.AVG_SAT}`} />
-        <KPICard title="Grievance Rate" value={`${kpi.data?.[0]?.GRIEVANCE_RATE}%`} />
+        <KPICard title="NPS Score" value={`${kpi.data?.[0]?.NPS}`} tooltip="Net Promoter Score — calculated as (% Promoters) minus (% Detractors). Ranges from -100 to +100; above 0 is good, above 50 is excellent." />
+        <KPICard title="Promoter %" value={`${kpi.data?.[0]?.PROMOTER_PCT}%`} tooltip="Percentage of members who scored 9-10 on the NPS question — these members are likely to recommend the plan to others." />
+        <KPICard title="Detractor %" value={`${kpi.data?.[0]?.DETRACTOR_PCT}%`} tooltip="Percentage of members who scored 0-6 on the NPS question — these members are dissatisfied and may leave or discourage others." />
+        <KPICard title="Avg Satisfaction" value={`${kpi.data?.[0]?.AVG_SAT}`} tooltip="Average satisfaction score on a 1-10 scale across all survey responses — measures overall member experience quality." />
+        <KPICard title="Grievance Rate" value={`${kpi.data?.[0]?.GRIEVANCE_RATE}%`} tooltip="Percentage of surveyed members who also filed a formal grievance within 90 days — indicates serious service failures." />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

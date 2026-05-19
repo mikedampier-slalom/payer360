@@ -61,10 +61,10 @@ export default function ProviderNetwork() {
       <h1 className="text-2xl font-bold text-white">Provider Network</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <KPICard title="Network Size" value={kpi.data?.[0]?.NETWORK_SIZE?.toLocaleString()} />
-        <KPICard title="Turnover Rate" value={`${kpi.data?.[0]?.TURNOVER_RATE}%`} />
-        <KPICard title="New Providers (12mo)" value={kpi.data?.[0]?.NEW_PROVIDERS?.toLocaleString()} />
-        <KPICard title="Avg Contract Years" value={`${kpi.data?.[0]?.AVG_YEARS}`} />
+        <KPICard title="Network Size" value={kpi.data?.[0]?.NETWORK_SIZE?.toLocaleString()} tooltip="Total number of actively contracted providers in the network — includes physicians, specialists, and facilities." />
+        <KPICard title="Turnover Rate" value={`${kpi.data?.[0]?.TURNOVER_RATE}%`} tooltip="Percentage of providers who terminated their contract — high turnover disrupts member access and care continuity." />
+        <KPICard title="New Providers (12mo)" value={kpi.data?.[0]?.NEW_PROVIDERS?.toLocaleString()} tooltip="Number of new provider contracts signed in the last 12 months — indicates network growth and recruitment success." />
+        <KPICard title="Avg Contract Years" value={`${kpi.data?.[0]?.AVG_YEARS}`} tooltip="Average duration of provider contracts in years — longer contracts signal network stability and provider satisfaction." />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

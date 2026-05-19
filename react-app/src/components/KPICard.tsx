@@ -3,11 +3,12 @@ interface KPICardProps {
   value: string | number | null | undefined;
   subtitle?: string;
   isLoading?: boolean;
+  tooltip?: string;
 }
 
-export default function KPICard({ title, value, subtitle, isLoading }: KPICardProps) {
+export default function KPICard({ title, value, subtitle, isLoading, tooltip }: KPICardProps) {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/5 p-4 flex flex-col gap-1">
+    <div className="rounded-xl border border-white/10 bg-white/5 p-4 flex flex-col gap-1" title={tooltip}>
       <span className="text-xs text-gray-400 uppercase tracking-wide">{title}</span>
       {isLoading ? (
         <div className="h-8 w-24 bg-white/10 animate-pulse rounded" />

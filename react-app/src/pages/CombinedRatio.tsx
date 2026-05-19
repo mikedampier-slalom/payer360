@@ -48,10 +48,10 @@ export default function CombinedRatio() {
       <h1 className="text-2xl font-bold text-white">Combined Ratio</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <KPICard title="Combined Ratio" value={`${kpi.data?.[0]?.COMBINED}%`} />
-        <KPICard title="Loss Ratio" value={`${kpi.data?.[0]?.LOSS_RATIO}%`} />
-        <KPICard title="Expense Ratio" value={`${kpi.data?.[0]?.EXPENSE_RATIO}%`} />
-        <KPICard title="UW Result" value={`$${kpi.data?.[0]?.UW_RESULT}M`} />
+        <KPICard title="Combined Ratio" value={`${kpi.data?.[0]?.COMBINED}%`} tooltip="Combined Ratio — sum of loss ratio and expense ratio. Below 100% means underwriting profit; above 100% means underwriting loss." />
+        <KPICard title="Loss Ratio" value={`${kpi.data?.[0]?.LOSS_RATIO}%`} tooltip="Incurred losses (claims paid) as a percentage of premium earned — the largest component of the combined ratio." />
+        <KPICard title="Expense Ratio" value={`${kpi.data?.[0]?.EXPENSE_RATIO}%`} tooltip="Underwriting expenses (admin + loss adjustment) as a percentage of premium earned — measures operational efficiency." />
+        <KPICard title="UW Result" value={`$${kpi.data?.[0]?.UW_RESULT}M`} tooltip="Underwriting Result — premium earned minus all losses and expenses. Positive means profit from insurance operations alone." />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

@@ -53,9 +53,9 @@ export default function ClaimsDenials() {
       <h1 className="text-2xl font-bold text-white">Claims Denials</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <KPICard title="Denial Rate" value={`${kpi.data?.[0]?.DENIAL_RATE}%`} />
-        <KPICard title="Denied Charges" value={`$${kpi.data?.[0]?.DENIED_AMT}M`} />
-        <KPICard title="Appeal Overturn Rate" value={`${kpi.data?.[0]?.OVERTURN_RATE}%`} />
+        <KPICard title="Denial Rate" value={`${kpi.data?.[0]?.DENIAL_RATE}%`} tooltip="Percentage of submitted claims that are denied by the payer — includes all denial reasons (auth, coding, eligibility, etc.)." />
+        <KPICard title="Denied Charges" value={`$${kpi.data?.[0]?.DENIED_AMT}M`} tooltip="Total dollar amount of charges on denied claims — represents revenue at risk until appealed or written off." />
+        <KPICard title="Appeal Overturn Rate" value={`${kpi.data?.[0]?.OVERTURN_RATE}%`} tooltip="Percentage of appealed denials that were overturned (won) — higher rates suggest initial denials may be overly aggressive." />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

@@ -59,10 +59,10 @@ export default function ClaimsSettlement() {
       <h1 className="text-2xl font-bold text-white">Claims Settlement</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <KPICard title="Avg Days to Settle" value={`${kpi.data?.[0]?.AVG_DAYS}`} />
-        <KPICard title="Clean Claim Rate" value={`${kpi.data?.[0]?.CLEAN_RATE}%`} />
-        <KPICard title="Auto-Adjudication Rate" value={`${kpi.data?.[0]?.AUTO_RATE}%`} />
-        <KPICard title="Pending Claims" value={kpi.data?.[0]?.PENDING?.toLocaleString()} />
+        <KPICard title="Avg Days to Settle" value={`${kpi.data?.[0]?.AVG_DAYS}`} tooltip="Average number of calendar days from claim receipt to final payment — measures end-to-end claims processing speed." />
+        <KPICard title="Clean Claim Rate" value={`${kpi.data?.[0]?.CLEAN_RATE}%`} tooltip="Percentage of claims submitted without errors (correct coding, complete info) — clean claims process faster and cheaper." />
+        <KPICard title="Auto-Adjudication Rate" value={`${kpi.data?.[0]?.AUTO_RATE}%`} tooltip="Percentage of claims decided automatically by rules engine without manual review — higher rates reduce cost per claim." />
+        <KPICard title="Pending Claims" value={kpi.data?.[0]?.PENDING?.toLocaleString()} tooltip="Number of claims currently in process that have not yet been adjudicated or paid — a measure of backlog." />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

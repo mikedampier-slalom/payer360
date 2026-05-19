@@ -63,11 +63,11 @@ export default function MedicalLossRatio() {
       <h1 className="text-2xl font-bold text-white">Medical Loss Ratio</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
-        <KPICard title="Overall MLR" value={`${kpi.data?.[0]?.MLR}%`} />
-        <KPICard title="Premium Earned" value={`$${kpi.data?.[0]?.PREMIUM}M`} />
-        <KPICard title="Incurred Claims" value={`$${kpi.data?.[0]?.CLAIMS}M`} />
-        <KPICard title="Quality Spend" value={`$${kpi.data?.[0]?.QI}M`} />
-        <KPICard title="Admin Ratio" value={`${kpi.data?.[0]?.ADMIN}%`} />
+        <KPICard title="Overall MLR" value={`${kpi.data?.[0]?.MLR}%`} tooltip="Medical Loss Ratio — percentage of premium revenue spent on claims and quality improvement. ACA requires 80% (individual/small group) or 85% (large group)." />
+        <KPICard title="Premium Earned" value={`$${kpi.data?.[0]?.PREMIUM}M`} tooltip="Total premium revenue collected from members across all lines of business." />
+        <KPICard title="Incurred Claims" value={`$${kpi.data?.[0]?.CLAIMS}M`} tooltip="Total medical claims costs paid to providers on behalf of members." />
+        <KPICard title="Quality Spend" value={`$${kpi.data?.[0]?.QI}M`} tooltip="Spending on quality improvement activities (care coordination, disease management, health IT) that counts toward MLR numerator." />
+        <KPICard title="Admin Ratio" value={`${kpi.data?.[0]?.ADMIN}%`} tooltip="Percentage of premium spent on administrative costs (salaries, marketing, overhead) — lower is better for MLR compliance." />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">

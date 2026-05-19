@@ -59,9 +59,9 @@ export default function MemberRenewals() {
       <h1 className="text-2xl font-bold text-white">Member Renewals</h1>
 
       <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-        <KPICard title="Renewal Rate" value={`${kpi.data?.[0]?.RENEWAL_RATE}%`} />
-        <KPICard title="Lapsed Members" value={kpi.data?.[0]?.LAPSED?.toLocaleString()} />
-        <KPICard title="Avg Tenure" value={`${kpi.data?.[0]?.AVG_TENURE} mo`} />
+        <KPICard title="Renewal Rate" value={`${kpi.data?.[0]?.RENEWAL_RATE}%`} tooltip="Percentage of eligible members who renewed their policy at term — a key indicator of member retention and satisfaction." />
+        <KPICard title="Lapsed Members" value={kpi.data?.[0]?.LAPSED?.toLocaleString()} tooltip="Total number of members whose policies lapsed (terminated) — includes voluntary exits, non-payment, relocation, and employer changes." />
+        <KPICard title="Avg Tenure" value={`${kpi.data?.[0]?.AVG_TENURE} mo`} tooltip="Average number of months members have been continuously enrolled — longer tenure indicates stronger member loyalty." />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
