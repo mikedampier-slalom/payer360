@@ -11,6 +11,7 @@ import MemberSatisfaction from './pages/MemberSatisfaction';
 import CombinedRatio from './pages/CombinedRatio';
 import ClaimsSettlement from './pages/ClaimsSettlement';
 import ProviderNetwork from './pages/ProviderNetwork';
+import Build from './pages/Build';
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ export default function App() {
                 <Route path="/combined-ratio" element={<CombinedRatio />} />
                 <Route path="/settlement" element={<ClaimsSettlement />} />
                 <Route path="/network" element={<ProviderNetwork />} />
+                <Route path="/build" element={<Build />} />
               </Routes>
             </ErrorBoundary>
           </main>

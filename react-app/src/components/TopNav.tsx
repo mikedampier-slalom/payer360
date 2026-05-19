@@ -8,6 +8,7 @@ const links = [
   { to: '/combined-ratio', label: 'Combined Ratio', desc: 'Combined Ratio — loss ratio plus expense ratio with quarterly trends and underwriting profit/loss by LOB' },
   { to: '/settlement', label: 'Settlement', desc: 'Claims Settlement Cycle — average days to adjudicate and pay, clean claim rates, and auto-adjudication trends' },
   { to: '/network', label: 'Network', desc: 'Provider Network Stability — network size, turnover rate by specialty, termination reasons, and quality scores' },
+  { to: '/build', label: 'Build', desc: 'Build — how the Payer 360 platform was constructed using Cortex Code' },
 ];
 
 export default function TopNav() {
